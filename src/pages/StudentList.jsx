@@ -6,29 +6,31 @@ const StudentList = () => {
 
   return (
     <div>
-      <h2 className="text-4xl text-indigo-700 mb-8 tracking-wider text-center">All Students...</h2>
-      
+      <h2 className="text-5xl text-cyan-50 mb-10 tracking-wider text-center drop-shadow-md">
+        All Students...
+      </h2>
+
       <div className="grid gap-6">
         {students.map((student) => {
           const isAdded = favorites.some((fav) => fav.id === student.id);
 
           return (
-            <div 
-              key={student.id} 
-              className="flex items-center justify-between p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border-2 border-transparent hover:border-indigo-100"
+            <div
+              key={student.id}
+              className="flex items-center justify-between p-8 bg-white/5 backdrop-blur-xl rounded-2xl shadow-lg border border-white/10 border-l-8 border-l-cyan-500 hover:border-white/20 hover:border-l-green-500 hover:bg-white/10 transition-all duration-500 hover:-translate-y-1"
             >
               <div>
-                <p className="text-2xl">{student.name}</p>
-                <p className="text-gray-500 text-lg mt-1">Roll ID: {student.id}</p>
+                <p className="text-3xl text-white pb-1 tracking-wide">{student.name}</p>
+                <p className="text-lg text-cyan-200/50 mt-1 tracking-wider">Roll ID: {student.id}</p>
               </div>
+
               <button
                 onClick={() => addFavorite(student)}
                 disabled={isAdded}
-                className={`px-6 py-3 rounded-lg text-lg tracking-wider transition-colors ${
-                  isAdded 
-                    ? "bg-gray-300 text-gray-600 cursor-not-allowed" 
-                    : "bg-indigo-500 text-white hover:bg-indigo-600 active:scale-95 cursor-pointer"
-                }`}
+                className={`px-8 py-3 rounded-xl text-base tracking-widest transition-all duration-300 uppercase ${isAdded
+                    ? "bg-white/10 text-white/40 cursor-not-allowed border border-white/5 shadow-none"
+                    : "bg-cyan-600 text-white border border-green-400 hover:bg-green-500 hover:shadow-[0_0_25px_rgba(6,182,212,0.6)] active:scale-95 cursor-pointer shadow-md"
+                  }`}
               >
                 {isAdded ? "Added to Favourites" : "Add to Favourites"}
               </button>

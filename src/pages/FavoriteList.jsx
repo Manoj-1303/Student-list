@@ -6,22 +6,32 @@ const FavoriteList = () => {
 
   return (
     <div>
-      <h2 className="text-4xl text-red-500 mb-8 tracking-wider text-center">My Favourite Students</h2>
+      <h2 className="text-5xl text-rose-500 mb-10 tracking-wider text-center drop-shadow-sm">
+        My Favourite Students
+      </h2>
 
       {favorites.length === 0 ? (
-        <div className="text-center py-16 bg-white rounded-xl shadow-sm border-4 border-dashed border-gray-300">
-          <p className="text-gray-400 text-xl mt-4">No favourite students added yet.</p>
+        <div className="max-w-2xl mx-auto text-center py-10 px-8 bg-white/5 backdrop-blur-xl rounded-3xl shadow-lg border-4 border-dashed border-cyan-500/60">
+          <p className="text-white text-2xl tracking-widest">No favourite students added yet.</p>
         </div>
       ) : (
         <div className="grid gap-6">
           {favorites.map((student) => (
-            <div key={student.id} className="flex items-center justify-between p-6 bg-white rounded-xl shadow-md border-l-8 border-red-500">
+            <div
+              key={student.id}
+              className="flex items-center justify-between p-8 bg-white/5 backdrop-blur-xl rounded-2xl shadow-lg border border-white/10 hover:border-green-500/50 hover:bg-white/10 border-l-8 border-l-rose-500 transition-all duration-500 hover:-translate-y-1"
+            >
               <div>
-                <p className="text-2xl">{student.name}</p>
-                <p className="text-gray-500 text-lg mt-1">Roll ID: {student.id}</p>
+                <p className="text-3xl text-white pb-1 tracking-wide">{student.name}</p>
+                <p className="text-lg text-cyan-200/50 mt-1 tracking-wider">Roll ID: {student.id}</p>
               </div>
-              <button onClick={() => removeFavorite(student.id)} className="text-red-500 bg-red-50 hover:bg-red-500 hover:text-white border-2 border-red-500 px-6 py-3 rounded-lg transition-colors text-lg tracking-wider cursor-pointer">
-                Remove</button>
+
+              <button
+                onClick={() => removeFavorite(student.id)}
+                className="px-8 py-3 rounded-xl text-base tracking-widest transition-all duration-300 uppercase bg-rose-600 text-white border border-rose-500 hover:bg-rose-500 hover:shadow-[0_0_25px_rgba(244,63,94,0.6)] active:scale-95 cursor-pointer shadow-md"
+              >
+                Remove
+              </button>
             </div>
           ))}
         </div>
