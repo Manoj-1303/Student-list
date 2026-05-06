@@ -8,7 +8,7 @@ function App() {
   return (
     <StudentProvider>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-black via-zinc-400 to-black text-white">
+        <div className="min-h-screen bg-linear-to-br from-black via-zinc-400 to-black text-white">
           <Navbar />
 
           <main className="max-w-4xl mx-auto py-12 px-4">
