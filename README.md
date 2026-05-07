@@ -1,16 +1,33 @@
-# React + Vite
+# 🎓 StudentManager: Vibrant React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fast, and vibrant Single Page Application (SPA) built with **React**, **Vite**, and **Tailwind CSS v4**. This project demonstrates core React concepts including global state management, client-side routing, and conditional rendering, all wrapped in a custom "glossy" UI design.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Global State Management:** Uses React's `useContext` API to manage the "Favourite Students" list globally across the application.
+* **Client-Side Routing:** Utilizes `react-router-dom` for seamless, instant navigation between pages without browser reloads.
+* **Smart UI Logic:** Prevents adding duplicate students to the favourites list and dynamically updates button states (e.g., changing from "Add to Favourites" to "Added").
+* **Modern Aesthetic:** Features a custom "glossy" UI with vibrant gradients (Teal, Pink, Rose), hover effects, and the bold **Alfa Slab One** typography.
+* **Lightning Fast:** Powered by Vite for instant server start and lightning-fast Hot Module Replacement (HMR).
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Framework:** [React 18](https://react.dev/)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+* **Routing:** [React Router v6](https://reactrouter.com/)
+* **Typography:** Google Fonts (Alfa Slab One)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Follow these steps to get the project running on your local machine.
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. **Clone the repository** (or download the source code):
+   ```bash
+   git clone <your-repository-url>
+   cd student-app
